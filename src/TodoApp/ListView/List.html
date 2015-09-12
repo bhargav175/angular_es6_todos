@@ -1,0 +1,24 @@
+<h1>Todo Items</h1>
+
+<div class='panel'>
+  <todo-list list-items='list.model.todos'  on-delete='list.onDelete'> </todo-list>
+</div>
+
+<h1>Completed Items </h1>
+<table class="table table-bordered">
+  <tr><th>Text</th><th>Status</th></tr>
+  <tr class="active" ng-repeat="item in list.model.todos | completed">
+    <td>{{item.text}}</td>
+    <td>{{item.status}}</td>
+  </tr>
+</table>
+
+<h1>InComplete Items </h1>
+<table class="table table-bordered">
+  <tr><th>Text</th><th>Status</th></tr>
+  <tr class="warning" ng-repeat="item in list.model.todos | incomplete">
+    <td>{{item.text}}</td>
+    <td>{{item.status}}</td>
+  </tr>
+</table>
+<!-- <button class="btn btn-primary" ng-click="TodoList.changeName()">Change</button> -->

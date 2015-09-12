@@ -1,0 +1,13 @@
+<div>
+	<input style="float:left"  type="checkbox" ng-model='obj.status' ng-true-value="'completed'" ng-false-value="'incomplete'" />
+	<p  style="float:left" ng-hide='edit'>{{obj.text}}</p>
+	
+	<div style="float:left; margin-left:5px" ng-show='edit'><input style="padding:5px"  ng-model='obj.text'/>
+	
+	</div>
+	<div class="clearfix"></div>
+	<br/>
+	<button ng-show='edit' ng-click='doneEditFn()'>Done</button>
+	<button ng-hide='edit' ng-click='editFn()'>Edit</button>
+	<button ng-hide='edit' ng-click="deleteFn(obj)">Delete</button>
+</div>

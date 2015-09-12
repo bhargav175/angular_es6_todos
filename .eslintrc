@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es6" : true,
+    "node" : true
+  },
+  "globals": {
+    "require": true,
+    "module":true,
+    "window":true
+  },
+  "rules": {
+    "semi": [2, "always"]
+  },
+    "ecmaFeatures": {
+        "modules": true
+    },
+}

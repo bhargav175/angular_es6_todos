@@ -1,0 +1,26 @@
+<div class="well">
+<h3>Add an Item</h3>
+<br/>
+<br/>
+<form novalidate >
+  <div class="form-group" >
+    <label for="text1" class="col-sm-2 control-label">Text</label>
+    <input type="text" placeholder="Enter something here" class="form-control" id="text1" ng-model="todoItem.todo.text" /><br />
+  </div>
+
+  <div class="checkbox">
+    <label>
+      <input type="radio" ng-model="todoItem.todo.status" value="completed" />Completed
+      <input type="radio" ng-model="todoItem.todo.status" value="incomplete" />Incomplete<br />
+    
+    </label>
+  </div>
+  <button type="submit" class="btn btn-success" ng-click="todoItem.save(todoItem.todo)">Submit</button>
+</form>
+
+<br/>
+  <br/>
+  <pre>Todo = {{todoItem.todo}}</pre>
+  
+
+</div>
